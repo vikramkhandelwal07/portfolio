@@ -42,7 +42,7 @@ import twitter_white from './twitter-white.svg';
 import instagram_black from './instagram-black.svg';
 import instagram_white from './instagram-white.svg';
 import leetcode from './leetcode.svg';
-
+import leetcode_copy from './leetcode-copy.svg';
 export const assets = {
     github_black,
     github_white,
@@ -53,7 +53,7 @@ export const assets = {
     instagram_black,
     instagram_white,
     leetcode,
-
+    leetcode_copy,
     user_image,
     code_icon,
     code_icon_dark,

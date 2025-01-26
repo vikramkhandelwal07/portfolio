@@ -11,7 +11,7 @@ const sun_icon = "/assets/sun_icon.png"; // Image inside the public folder
 
 export function HeroBg() {
   const typedElement = useRef(null);
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     const options = {
