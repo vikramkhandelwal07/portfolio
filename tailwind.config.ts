@@ -85,6 +85,10 @@ export default {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)'
+      },
+      boxShadow:{
+        'black': '4px 4px 0 #000 ',
+        'white': '4px 4px 0 #fff '
       }
     }
   },

@@ -5,8 +5,8 @@ export function Navbar() {
     { name: "Home", url: "/", icon: "House" },
     { name: "About", url: "/about", icon: "User" },
     { name: "Projects", url: "#", icon: "Briefcase" },
-    { name: "Resume", url: "#", icon: "FileText" },
-    { name: "Contact", url: "#", icon: "Contact" },
+    { name: "Skills", url: "#", icon: "FileText" },
+    { name: "Resume", url: "#", icon: "Contact" },
   ];
 
   return <NavBar items={navItems} />;
