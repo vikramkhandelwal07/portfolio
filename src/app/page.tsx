@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
       <div>
-        <Navbar />
+        
         <HeroBg />
         <Background />
         <Contact />

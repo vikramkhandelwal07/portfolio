@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import Typed from "typed.js"; // Import the Typed.js library
 import { AuroraBackground } from "@/components/ui/aurora-background";
+import { Button } from "@/components/ui/button"; // Import the ShadCN Button component
 
 // Correctly reference images inside the public folder
 const moon_icon = "/assets/moon_icon.png"; // Image inside the public folder
@@ -11,7 +12,6 @@ const sun_icon = "/assets/sun_icon.png"; // Image inside the public folder
 
 export function HeroBg() {
   const typedElement = useRef(null);
-  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     const options = {
@@ -39,12 +39,6 @@ export function HeroBg() {
     }
   };
 
-  // Toggle dark mode
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    document.documentElement.classList.toggle("dark", !darkMode); // Toggle the dark mode on root element
-  };
-
   return (
     <AuroraBackground>
       <motion.div
@@ -57,19 +51,6 @@ export function HeroBg() {
         }}
         className="relative flex flex-col gap-4 items-center justify-center px-4"
       >
-        {/* Dark Mode Toggle Button */}
-        <button
-          onClick={toggleDarkMode}
-          className="fixed top-8 right-8 md:top-8 md:right-8 lg:top-6 lg:right-18   p-4 rounded-full shadow-lg text-center flex items-center "
-        >
-          <img
-            src={darkMode ? sun_icon : moon_icon}
-            alt="Toggle Dark Mode"
-            className="w-8 fixed top-8 right-8 md:top-8 md:right-8 lg:top-6 lg:right-18 p-1 rounded-full"
-          />
-        </button>
-
-
         <div className="text-3xl md:text-7xl font-bold dark:text-white text-center">
           Vikram Khandelwal
         </div>
@@ -90,18 +71,19 @@ export function HeroBg() {
         </div>
 
         <div className="flex gap-4 items-start text-start">
-          <button
+          {/* ShadCN Buttons */}
+          <Button
             onClick={onClickHandler}
-            className="bg-black dark:bg-neutral-200 rounded-full w-fit text-white dark:text-black px-4 py-2"
+            className="bg-black dark:bg-neutral-200 rounded-full w-fit text-white dark:text-black px-6 py-3"
           >
             Connect with Me
-          </button>
-          <button
+          </Button>
+          <Button
             onClick={onClickHandler}
-            className="bg-black dark:bg-black rounded-full w-fit text-white dark:text-white px-4 py-2"
+            className="bg-black dark:bg-black rounded-full w-fit text-white dark:text-white px-6 py-3"
           >
             Resume📄
-          </button>
+          </Button>
         </div>
       </motion.div>
     </AuroraBackground>

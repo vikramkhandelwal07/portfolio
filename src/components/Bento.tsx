@@ -16,8 +16,30 @@ export default function BentoBox() {
       <div className="col-span-1 md:col-span-2 h-[360px] bg-blue-200 rounded-2xl"></div>
 
       {/* Social block */}
-      <div className="h-[360px] border-2 bg-transparent bg-opacity-50 rounded-2xl p-4">
+      <div className="h-[360px] border-2 bg-opacity-50 rounded-2xl p-4">
         <div className="flex flex-col box-border border h-3/4 rounded-lg bg-transparent">
+          {/* Linkedin */}
+          <Link
+            href="https://www.linkedin.com/in/vikram-khandelwal07/" // Replace with your LinkedIn URL
+            passHref
+            legacyBehavior
+          >
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center p-2 border h-1/3 gap-5 mx-2 rounded-2xl relative bg-[#0a66c2] cursor-pointer hover:bg-opacity-90 transition-all duration-300 mt-2"
+            >
+              <Image
+                className="ml-2 relative z-10"
+                src={assets.linkedin_black} // Always use the dark theme logo
+                height={50}
+                width={50}
+                alt="Linkedin Icon"
+              />
+              <p className="text-2xl font-semibold relative z-10 text-white">Linkedin</p> {/* White text for contrast */}
+            </a>
+          </Link>
+         
           {/* Github */}
           <Link
             href="https://github.com/vikramkhandelwal07" // Replace with your GitHub URL
@@ -27,7 +49,7 @@ export default function BentoBox() {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center p-2 border h-1/3 gap-5 m-2 rounded-2xl relative bg-gray-950 cursor-pointer hover:bg-opacity-90 transition-all duration-300"
+              className="flex items-center p-2 border h-1/3 gap-5 mt-2 mx-2 rounded-2xl relative bg-blue-950 cursor-pointer hover:bg-opacity-90 transition-all duration-300"
             >
               <Image
                 className="ml-2 relative z-10"
@@ -40,27 +62,7 @@ export default function BentoBox() {
             </a>
           </Link>
 
-          {/* Linkedin */}
-          <Link
-            href="https://www.linkedin.com/in/vikram-khandelwal07/" // Replace with your LinkedIn URL
-            passHref
-            legacyBehavior
-          >
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center p-2 border h-1/3 gap-5 mx-2 rounded-2xl relative bg-[#0a66c2] cursor-pointer hover:bg-opacity-90 transition-all duration-300"
-            >
-              <Image
-                className="ml-2 relative z-10"
-                src={assets.linkedin_black} // Always use the dark theme logo
-                height={50}
-                width={50}
-                alt="Linkedin Icon"
-              />
-              <p className="text-2xl font-semibold relative z-10 text-white">Linkedin</p> {/* White text for contrast */}
-            </a>
-          </Link>
+          
 
           {/* Other Social Icons */}
           <div className="flex items-center justify-between p-2 border h-1/3 gap-5 m-2 rounded-2xl box-border">
